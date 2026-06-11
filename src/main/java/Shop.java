@@ -1,6 +1,6 @@
 public class Shop {
+
     private int money;
-    private boolean instock;
     private boolean clean;
     private int strawberry = 5;
     private int chocolate = 5;
@@ -8,7 +8,6 @@ public class Shop {
     private int fudge = 3;
     private int sprinkle = 3;
     private int cherry = 3;
-
 
 
 //setters + getters
@@ -66,14 +65,6 @@ public void setVan(int vanilla){
         return money;
     }
 
-    public void setStock(boolean instock){
-        this.instock = instock;
-    }
-
-    public boolean getStock(){
-        return instock;
-    }
-
     public void setClean(boolean clean){
         this.clean = clean;
     }
@@ -82,6 +73,7 @@ public void setVan(int vanilla){
         return clean;
     }
 
+    
 //actual methods
 
     public void serveIceCream(){
@@ -140,24 +132,13 @@ public void setVan(int vanilla){
                         "                                                                                                     ");
     }
 
-    public String checkStock(){
-        if (instock){
-            return "All flavors are in stock";
-        }
-        return "Flavors are not in stock";
-    }
 
-    public String StockUp(){
-        instock = true;
-        return "Ice cream is stocked up!";
-    }
-
-    public String cleanShop(){
+    public String clean(){
         clean = true;
         return "The shop is clean!";
     }
 
-    public String dirtyShop() {
+    public String dirty() {
         clean = false;
         return "The shop is dirty!";
     }

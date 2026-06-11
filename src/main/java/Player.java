@@ -1,6 +1,6 @@
 public class Player {
     private String name;
-    private int lives;
+    private int lives = 3;
 
     public Player(){
         this.name = "Yelena";
@@ -25,7 +25,7 @@ public class Player {
 
     public void loseLife(){
         lives --;
-        System.out.println("You lost a life! \nLives remaining: " + lives + "Please note that after all lives are used, the manager will step in, and the game ends.");
+        System.out.println("You lost a life! \nLives remaining: " + lives + "\nPlease note that after all lives are used, the manager will step in, and the game ends.");
     }
 
     // public Player(){

@@ -16,7 +16,7 @@ public class Main{
         System.out.println("Welcome to ice cream shop simulator! Please type in your name: ");
         String x = scanner.nextLine();
         player.setName(x);
-        System.out.println("welcome " + player.getName() + "!\nGame start! You have" + player.getLives() + "to begin.\n");
+        System.out.println("welcome " + player.getName() + "!\nGame start! You have " + player.getLives() + " lives to begin.\n");
 
     System.out.println(player.getName() + ": Man, I’m completely strapped for cash…");
     System.out.println(player.getName() + ": Every time I go out I have to ask my parents for money, but I can’t keep doing that forever… I think it’s time to get a j*b!");
@@ -31,7 +31,7 @@ public class Main{
     System.out.println("Customer 1: You don’t look familiar… are you new or something?\n" + player.getName() + ": (Obviously im new… if i wasn’t you wouldn’t be asking the question…)\n" + player.getName() + ": Yes, it’s my first day here. What would you like to order?");
     System.out.println("Customer 1: I see... I hate when when they hire newbies. They always get my order wrong! How do you mess up 2 scoops of chocolate ice cream with hot fudge?! It’s literally so simple!!!");
     System.out.println(player.getName() + ": (I guess that’s his order… Let’s get to it)\n");
-    System.out.println("Order: 2 scoops of chocolate ice cream, drizzle of hot fudge\n\nType A for vanilla, B for chocolate, and C for strawberry\n");
+    System.out.println("Order: 2 scoops of chocolate ice cream, drizzle of hot fudge\n\n ////////Inventory//////// \n\n~~~~~~~Ice cream flavors~~~~~~~\n\n" + shop.getChoco() + " scoops of chocolate left \n" + shop.getBerry()+ " scoops of strawberry left \n" + shop.getVan() + " scoops of vanilla left \n\n~~~~~~~Toppings~~~~~~~\n\n" + shop.getCherry() + " cherries left \n" + shop.getFudge() + " pumps of fudge left\n" + shop.getSprinkle() + " spoonfuls of sprinkles left\n////////////////////////" + "Type A for vanilla, B for chocolate, and C for strawberry\n");
 
     String choice1 = scanner.nextLine();
     // int wrong1 = 0;
@@ -45,8 +45,10 @@ public class Main{
     String choice3 = scanner.nextLine();
 
     if(choice1.equals("A") || choice1.equals("a") || choice1.equals("C") || choice1.equals("c") || choice2.equals("A") || choice2.equals("a") || choice3.equals("C") || choice3.equals("c")){
-        System.out.println("You serve the customer the ice cream, but he gives you a weird look.\nCustomer 1: Are you serious?! Why can't any of you newbies get it right?! I'm not supporting a business that hires incompetent fools like you!");
+        shop.serveIceCream();
+        System.out.println("He gives you a weird look.\nCustomer 1: Are you serious?! Why can't any of you newbies get it right?! I'm not supporting a business that hires incompetent fools like you!");
         player.loseLife();
+
         if(choice1.equals("A") || choice1.equals("a")){
             shop.lessVan();
         }else if(choice1.equals("C") || choice1.equals("c")){
@@ -63,8 +65,8 @@ public class Main{
         System.out.println("He has a shocked look in his face.\n\nCustomer 1: Wow... you got my order right! This is the first time a rookie didn't mess up my order! Kudos to you... What's your name again?\n" + player.getName() + ": " + player.getName() + ".\nCustomer 1: " + player.getName() + "... What a pretty name. My name is Kyren. Sorry for acting rude earlier, I was just tired of having my order always getting messed up. Thank you " + player.getName() + ", I hope I see you here tomorrow...\n" + player.getName() + ": Have a good one Kyren!\nKyren: Thank you again, " + player.getName() + ".");
         shop.lessFudge();
     }
+    customers ++;
 
-    
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
         @Override  
