@@ -7,14 +7,14 @@ public class Customer {
     int s = (int)(Math.random() * 7) + 1;
     int t = (int)(Math.random() * 2) + 1;
 
-    if(r = 1){
-        pref = ;
-    }
+    // if(r = 1){
+    //     pref = ;
+    // }
 
 
-    public Customer (){
-       name = ;
-       pref = ;
-       karen = ;
-    }
+    // public Customer (){
+    //    name = ;
+    //    pref = ;
+    //    karen = ;
+    // }
 }

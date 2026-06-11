@@ -1,11 +1,13 @@
-public abstract class Shop {
-    private String flavor;
+public class Shop {
     private int money;
     private boolean instock;
     private boolean clean;
-    private int strawberry;
-    private int chocolate;
-    private int vanilla;
+    private int strawberry = 5;
+    private int chocolate = 5;
+    private int vanilla = 5;
+    private int fudge = 3;
+    private int sprinkle = 3;
+    private int cherry = 3;
 
 
 
@@ -25,19 +27,35 @@ public void setChoco(int chocolate){
         return chocolate;
     }
 public void setVan(int vanilla){
-        this.flavor = flavor;
+        this.vanilla = vanilla;
     }
 
     public int getVan(){
         return vanilla;
     }
 
-    public void setFlavor(String flavor){
-        this.flavor = flavor;
+    public void setFudge(int fudge){
+        this.fudge = fudge;
     }
 
-    public String getFlavor(){
-        return flavor;
+    public int getFudge(){
+        return fudge;
+    }
+
+    public void setSprinkle(int sprinkle){
+        this.sprinkle = sprinkle;
+    }
+
+    public int getSprinkle(){
+        return sprinkle;
+    }
+
+    public void setCherry(int cherry){
+        this.cherry = cherry;
+    }
+
+    public int getCherry(){
+        return cherry;
     }
 
     public void setMoney(int money){
@@ -65,6 +83,62 @@ public void setVan(int vanilla){
     }
 
 //actual methods
+
+    public void serveIceCream(){
+        System.out.println("    _.._\r\n" + //
+                "  /`    `\\\r\n" + //
+                " |        |\r\n" + //
+                " \\._    _./\r\n" + //
+                " / `\"\"\"\"` \\\r\n" + //
+                "|          |\r\n" + //
+                "\\._      _./\r\n" + //
+                " \\ `\"\"\"\"` /\r\n" + //
+                "  \\##    /\r\n" + //
+                "   \\### /\r\n" + //
+                "    \\##/\r\n" + //
+                "     \\/\r\n");
+    };
+
+    public void lessChoco(){
+        chocolate --;
+        System.out.println("There are" + chocolate + " scoops of chocolate remaining.");
+    }
+    public void lessStraw(){
+        strawberry --;
+        System.out.println("There are" + strawberry + " scoops of strawberry remaining.");
+    }
+    public void lessVan(){
+        vanilla --;
+        System.out.println("There are" + vanilla + " scoops of vanilla remaining.");
+    }
+    public void lessFudge(){
+        fudge --;
+        System.out.println("There are" + fudge + " scoops remaining.");
+    }
+    public void lessSprinkle(){
+        sprinkle --;
+        System.out.println("There are" + sprinkle + " scoops remaining.");
+    }
+    public void lessCherry(){
+        cherry --;
+        System.out.println("There are" + cherry + " scoops remaining.");
+    }
+
+    public void KarenFight(){
+        System.out.println("                                                                                                     \n" + //
+                        "@@@  @@@   @@@@@@   @@@@@@@   @@@@@@@@  @@@  @@@     @@@@@@@@  @@@   @@@@@@@@  @@@  @@@  @@@@@@@     \n" + //
+                        "@@@  @@@  @@@@@@@@  @@@@@@@@  @@@@@@@@  @@@@ @@@     @@@@@@@@  @@@  @@@@@@@@@  @@@  @@@  @@@@@@@     \n" + //
+                        "@@!  !@@  @@!  @@@  @@!  @@@  @@!       @@!@!@@@     @@!       @@!  !@@        @@!  @@@    @@!       \n" + //
+                        "!@!  @!!  !@!  @!@  !@!  @!@  !@!       !@!!@!@!     !@!       !@!  !@!        !@!  @!@    !@!       \n" + //
+                        "@!@@!@!   @!@!@!@!  @!@!!@!   @!!!:!    @!@ !!@!     @!!!:!    !!@  !@! @!@!@  @!@!@!@!    @!!       \n" + //
+                        "!!@!!!    !!!@!!!!  !!@!@!    !!!!!:    !@!  !!!     !!!!!:    !!!  !!! !!@!!  !!!@!!!!    !!!       \n" + //
+                        "!!: :!!   !!:  !!!  !!: :!!   !!:       !!:  !!!     !!:       !!:  :!!   !!:  !!:  !!!    !!:       \n" + //
+                        ":!:  !:!  :!:  !:!  :!:  !:!  :!:       :!:  !:!     :!:       :!:  :!:   !::  :!:  !:!    :!:       \n" + //
+                        " ::  :::  ::   :::  ::   :::   :: ::::   ::   ::      ::        ::   ::: ::::  ::   :::     ::       \n" + //
+                        " :   :::   :   : :   :   : :  : :: ::   ::    :       :        :     :: :: :    :   : :     :        \n" + //
+                        "                                                                                                     ");
+    }
+
     public String checkStock(){
         if (instock){
             return "All flavors are in stock";

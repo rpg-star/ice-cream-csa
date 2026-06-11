@@ -15,9 +15,17 @@ public class Player {
         return name;
     }
 
-    public String loseLife(){
+    public void setLives(int lives){
+        this.lives = lives;
+    }
+
+    public int getLives(){
+        return lives;
+    }
+
+    public void loseLife(){
         lives --;
-        return "You lost a life! \nLives remaining: " + lives;
+        System.out.println("You lost a life! \nLives remaining: " + lives + "Please note that after all lives are used, the manager will step in, and the game ends.");
     }
 
     // public Player(){
