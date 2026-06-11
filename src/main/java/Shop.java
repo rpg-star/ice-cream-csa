@@ -85,6 +85,7 @@ public void setVan(int vanilla){
 //actual methods
 
     public void serveIceCream(){
+        System.out.println("You serve the customer the ice cream.");
         System.out.println("    _.._\r\n" + //
                 "  /`    `\\\r\n" + //
                 " |        |\r\n" + //
@@ -101,27 +102,27 @@ public void setVan(int vanilla){
 
     public void lessChoco(){
         chocolate --;
-        System.out.println("There are" + chocolate + " scoops of chocolate remaining.");
+        System.out.println("There are " + chocolate + " scoops of chocolate remaining.");
     }
     public void lessStraw(){
         strawberry --;
-        System.out.println("There are" + strawberry + " scoops of strawberry remaining.");
+        System.out.println("There are " + strawberry + " scoops of strawberry remaining.");
     }
     public void lessVan(){
         vanilla --;
-        System.out.println("There are" + vanilla + " scoops of vanilla remaining.");
+        System.out.println("There are " + vanilla + " scoops of vanilla remaining.");
     }
     public void lessFudge(){
         fudge --;
-        System.out.println("There are" + fudge + " scoops remaining.");
+        System.out.println("There are " + fudge + " pumps of hot fudge remaining.");
     }
     public void lessSprinkle(){
         sprinkle --;
-        System.out.println("There are" + sprinkle + " scoops remaining.");
+        System.out.println("There are " + sprinkle + " spoonfuls remaining.");
     }
     public void lessCherry(){
         cherry --;
-        System.out.println("There are" + cherry + " scoops remaining.");
+        System.out.println("There are " + cherry + " cherries remaining.");
     }
 
     public void KarenFight(){
